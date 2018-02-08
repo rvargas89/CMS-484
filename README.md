@@ -4,6 +4,6 @@ Rollins Delivery Service Project
 
 Team Memmbers:
 
-Roberto C Vargas
-Jordan Ramus
+Roberto C Vargas,
+Jordan Ramus,
 Madelyn Wyner
