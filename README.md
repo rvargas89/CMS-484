@@ -2,7 +2,7 @@
 
 Rollins Delivery Service Project
 
-Team Memmbers:
+Team Members:
 
 Roberto C Vargas,
 Jordan Ramus,
