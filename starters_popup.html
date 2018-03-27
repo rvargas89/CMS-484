@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+center {
+	color: white;
+	font-size: 49px;
+	font-weight: bolder;
+	background-color: #053A95;
+	min-width: 170px;
+	overflow: auto;
+}
+body {
+	background-size: cover;
+	margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2C77CC;
+		opacity: 0.8;
+}
+li {
+    float: left;
+    border-right:1px solid #17202A;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #053A95;
+		opacity: 0.8;
+}
+
+.title {
+	color: black;
+	font-size: 49px;
+	font-weight: bolder;
+	min-width: 170px;
+	overflow: auto;
+	position: absolute;
+	top: 170px;
+  left: 40%;
+	font-family: "Helvetica Neue", Times, serif;
+
+}
+
+.button1 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+  padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 20%;
+	top: 300px;
+	border-radius: 8px;
+}
+.button1:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button2 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+  padding: 15px 20px;
+	position: absolute;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 4px 2px;
+	box-shadow: 6px 6px 5px;
+  cursor: pointer;
+	margin: 0;
+	left: 18.5%;
+	top: 400px;
+	border-radius: 8px;
+}
+.button2:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button3 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 15%;
+	top: 500px;
+	border-radius: 8px;
+}
+.button3:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button4 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 16%;
+	top: 600px;
+	border-radius: 8px;
+}
+.button4:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button5 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 56%;
+	top: 300px;
+	border-radius: 8px;
+}
+
+.button5:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button6 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 57%;
+	top: 400px;
+	border-radius: 8px;
+}
+
+.button6:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button7 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 60%;
+	top: 500px;
+	border-radius: 8px;
+}
+
+.button7:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button8 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 59%;
+	top: 600px;
+	border-radius: 8px;
+}
+
+.button8:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button9 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 37%;
+	top: 700px;
+	border-radius: 8px;
+}
+
+.button9:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+
+body {
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal_button1 {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #94BFF0;
+		position: relative;
+
+}
+.modal_button1:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.modal_button2 {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #94BFF0;
+		position: relative;
+
+}
+.modal_button2:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 12px 0 0px 0;
+    position: relative;
+}
+
+
+img.avatar {
+    width: 30%;
+}
+
+.container {
+    padding: 40px;
+}
+
+<div class="container" style="background-color:#f1f1f1">
+
+
+.show {display:block;}
+</style>
+</head>
+
+
+<body background="starters.jpg" >
+
+	<ul>
+		 <li><a href="home.html">Home</a></li>
+		 <li><a href="home.html">Something</a></li>
+		 <li><a href="home.html">Something</a></li>
+		 <li style="float:right"><a href="#cart"><img src="cart.png" alt="Cart" style="width:20px;height:15px;"></a></li>
+	</ul>
+
+<p class = "title"> Starters<p>
+
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button1"style="width:auto;">Tuna Tiradito</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button2"style="width:auto;">Crispy Empanadas</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button3"style="width:auto;">Grilled Chicken Quesadillas</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button4"style="width:auto;">Cage Free Chicken Wings</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button5"style="width:auto;">Southern Chicken Tenders</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button6"style="width:auto;">Fried Cheese Tequeños </button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button7"style="width:auto;">Shrimp Scampi</button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button8"style="width:auto;">Vegetable Gyozas </button>
+<button type="button" onclick="document.getElementById('id01').style.display='block'" class="button9"style="width:auto;">Starters Sample Platter</button>
+
+<div id="id01" class="modal">
+
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="tiradito.jpg" alt="Avatar" class="avatar" >
+	    </div>
+
+	    <div class="container">
+				<h1 align="center" >Tuna Tiradito</h1>
+	      <button type="button"onclick="document.getElementById('id01').style.display='none'" class="modal_button1">Add This Item To My Order</button>
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</button>
+				<label><b>You Have Ordered This Many</b></label>
+        :<output name="x" for="a b"></output>
+
+
+	<script>
+	// Get the modal
+	var modal = document.getElementById('id01');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+
+</script>
+
+</body>
+</html>
