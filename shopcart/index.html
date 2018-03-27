@@ -346,15 +346,9 @@ function check_window() {
 </script>
 
 <!-- onLoad=parent.get_that_cookie();check_window() -->
+
 </head>
-<frameset cols=25%,*  resize=yes onLoad=parent.get_that_cookie()>
-  <Frame src=navigate.html name=navigate>
-  <frame src=welcome.html name=main>
-<noframes>
-
-This page requires frames.
-
-
-</noframes>
+<frameset resize=yes onLoad=parent.get_that_cookie()>
+  <frame src=home.html name=main>
 </frameset>
 </html> 
