@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {
+	background-size: cover;
+	margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2C77CC;
+		opacity: 0.8;
+}
+li {
+    float: left;
+    border-right:1px solid #17202A;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #053A95;
+		opacity: 0.8;
+}
+
+.title {
+	color: black;
+	font-size: 49px;
+	font-weight: bolder;
+	min-width: 170px;
+	overflow: auto;
+	position: absolute;
+	top: 170px;
+  left: 40%;
+	font-family: "Helvetica Neue", Times, serif;
+
+}
+
+.button1 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+  padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 20%;
+	top: 300px;
+	border-radius: 8px;
+}
+.button1:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button2 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+  padding: 15px 20px;
+	position: absolute;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 4px 2px;
+	box-shadow: 6px 6px 5px;
+  cursor: pointer;
+	margin: 0;
+	left: 18.5%;
+	top: 400px;
+	border-radius: 8px;
+}
+.button2:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button3 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 15%;
+	top: 500px;
+	border-radius: 8px;
+}
+.button3:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button4 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 16%;
+	top: 600px;
+	border-radius: 8px;
+}
+.button4:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button5 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 56%;
+	top: 300px;
+	border-radius: 8px;
+}
+
+.button5:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button6 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 57%;
+	top: 400px;
+	border-radius: 8px;
+}
+
+.button6:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button7 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 60%;
+	top: 500px;
+	border-radius: 8px;
+}
+
+.button7:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button8 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 59%;
+	top: 600px;
+	border-radius: 8px;
+}
+
+.button8:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.button9 {
+	background-color: #94BFF0;
+	border: none;
+	color: black;
+	padding: 15px 20px;
+	position: absolute;
+	top: 230px;
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+	box-shadow: 6px 6px 5px;
+	margin: 0;
+	left: 37%;
+	top: 700px;
+	border-radius: 8px;
+}
+
+.button9:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.modalDialog {
+  position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fefefe;
+  background: -moz-linear-gradient(#fefefe, #999);
+  background: -webkit-linear-gradient(#fefefe, #999);
+  background: -o-linear-gradient(#fefefe, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.modal_button1 {
+    width: auto;
+    padding: 10px 10px;
+    background-color: #94BFF0;
+}
+.modal_button1:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.modal_button2 {
+    width: auto;
+    padding: 10px 10px;
+    background-color: #94BFF0;
+}
+.modal_button2:hover {
+	background-color: #053A95;
+	opacity: 0.9;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 12px 0 0px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 70%;
+}
+
+
+.container {
+    padding: 80px;
+}
+
+<div class="container" style="background-color:#f1f1f1">
+
+
+.show {display:block;}
+</style>
+</head>
+
+
+<body background="starters.jpg" >
+
+	<ul>
+		 <li><a href="home.html">Home</a></li>
+		 <li><a href="home.html">Something</a></li>
+		 <li><a href="home.html">Something</a></li>
+		 <li style="float:right"><a href="#cart"><img src="cart.png" alt="Cart" style="width:20px;height:15px;"></a></li>
+	</ul>
+
+<p class = "title"> Starters<p>
+
+<a href="#openModal1" class="button1"style="width:auto;">Tuna Tiradito</a>
+<a href="#openModal2" class="button2"style="width:auto;">Crispy Empanadas</a>
+<a href="#openModal3" class="button3"style="width:auto;">Grilled Chicken Quesadillas</a>
+<a href="#openModal4" class="button4"style="width:auto;">Cage Free Chicken Wings</a>
+<a href="#openModal5" class="button5"style="width:auto;">Southern Chicken Tenders</a>
+<a href="#openModal6" class="button6"style="width:auto;">Fried Cheese Tequeños </a>
+<a href="#openModal7" class="button7"style="width:auto;">Shrimp Scampi</a>
+<a href="#openModal8" class="button8"style="width:auto;">Vegetable Gyozas </a>
+<a href="#openModal9" class="button9"style="width:auto;">Starters Sample Platter</a>
+
+<div id="openModal1" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+		<img align="center" src="tiradito.jpg" alt="Avatar" class="avatar" >
+    <h2 align="center" >Tuna Tiradito</h2>
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal2" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Crispy Empanadas</h2>
+		<img align="center" src="empanadas.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal3" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Grilled Chicken Quesadillas</h2>
+		<img align="center" src="quesadilla.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal4" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Cage Free Chicken Wings</h2>
+		<img align="center" src="chicken_wings.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal5" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Southern Chicken Tenders</h2>
+		<img align="center" src="tenders.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+
+<div id="openModal6" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Fried Cheese Tequeños </h2>
+		<img align="center" src="tequenos.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+
+<div id="openModal7" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Shrimp Scampi </h2>
+		<img align="center" src="shrimp scampi.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal8" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Vegetable Gyozas</h2>
+		<img align="center" src="gyozas.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+<div id="openModal9" class="modalDialog">
+<div class="imgcontainer">
+    <a href="#close" title="Close" class="close">X</a>
+    <h2 align="center" >Starters Sample Platter</h2>
+		<img align="center" src="sampler.jpg" alt="Avatar" class="avatar" >
+		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
+		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
+		<center><b>You Have Ordered This Many:</b></center>
+		<output name="x" for="a b"></output>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
