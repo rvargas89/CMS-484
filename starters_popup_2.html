@@ -353,6 +353,42 @@ img.avatar {
     padding: 80px;
 }
 
+
+<script language=javascript>
+<!-- hide
+function write_to_field(code)
+{
+ var found = false;
+ var i =0;
+ while ((found == false) && (i < document.form1.elements.length))
+  {i = i + 1
+   if (document.form1.elements[i].name == code)
+     {
+      found = true;
+      document.form1.elements[i].value = parent.item_quan(code);
+     }
+  }
+}
+function Loc_additem(code,price,desc,url)
+{
+ self.parent.additem(code,price,desc,url);
+ write_to_field(code)
+}
+function Loc_subitem(code,price,desc)
+{
+self.parent.subitem(code,price,desc);
+write_to_field(code)
+}
+function update_thiselem_page()
+{
+if (self!=parent)
+parent.update_this_page()
+}
+<!-- End -->
+</script>
+
+
+
 <div class="container" style="background-color:#f1f1f1">
 
 
@@ -389,7 +425,7 @@ img.avatar {
     <h2 align="center" >Tuna Tiradito</h2>
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -401,7 +437,7 @@ img.avatar {
 		<img align="center" src="empanadas.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -413,7 +449,7 @@ img.avatar {
 		<img align="center" src="quesadilla.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -425,7 +461,7 @@ img.avatar {
 		<img align="center" src="chicken_wings.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -437,20 +473,20 @@ img.avatar {
 		<img align="center" src="tenders.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
 
-
+<P><HR Width="60%"><P>
 <div id="openModal6" class="modalDialog">
 <div class="imgcontainer">
     <a href="#close" title="Close" class="close">X</a>
     <h2 align="center" >Fried Cheese Tequeños </h2>
 		<img align="center" src="tequenos.jpg" alt="Avatar" class="avatar" >
-		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
-		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<input align = "center" name=addbox type=button value="Add This Item To My Order" onclick=Loc_additem('item1','2.22','starters_item_1','starters_popup_2.html')><br>
+		<input align = "center" type=button name=subbox value="Subtract This Item From My Order" onclick=Loc_subitem('item1','2.22','starters_item_1','starters_popup_2.html')><BR>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -463,7 +499,7 @@ img.avatar {
 		<img align="center" src="shrimp scampi.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -475,7 +511,7 @@ img.avatar {
 		<img align="center" src="gyozas.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
@@ -487,13 +523,13 @@ img.avatar {
 		<img align="center" src="sampler.jpg" alt="Avatar" class="avatar" >
 		<p align="center" type="button"onclick="document.getElementById('id02').style.display='none'" class="modal_button1">Add This Item To My Order</p>
 		<p align="center" type="button" onclick="document.getElementById('id01').style.display='none'" class="modal_button2">Subtract This Item From My Order</p>
-		<center><b>You Have Ordered This Many:</b></center>
+		<center><b>You Have Ordered This Many:<input type=text name=item1 size=2>
 		<output name="x" for="a b"></output>
 </div>
 </div>
 
 
 
-
+<br>
 </body>
 </html>
