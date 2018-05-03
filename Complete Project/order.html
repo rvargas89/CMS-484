@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<!-- This is the order page -->
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>RDS Checkout</title>
+</head>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+
+body {
+  text-align:center;
+  background:linear-gradient(180deg, #ABECFF 10%, #36C5FF 70%);
+  color:#555;
+  font-family:'Raleway', sans-serif;
+  font-weight:200;
+  font-weight: bolder;
+  font-size:40px;
+  padding-top:3vh;
+  height:300vh;
+  overflow: auto;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+
+}
+
+.button1 {
+    background-color: #94BFF0;
+    color: white;
+    padding:10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+	  border-radius: 15px;
+  }
+.button1:hover {
+	background-color: #17537D;
+	opacity: 0.9;
+}
+
+</style>
+
+<!-- This is scrip takes care of order shipping and
+and order submiting -->
+<script language="javascript">
+index = 0;
+
+function format(val, post)
+{
+    var decpoint;
+    var begin;
+    var end;
+    var valstr;
+	var temp_char;
+    valstr = "" + val;
+	//alert('valstr = ' + valstr);
+    decpoint = valstr.indexOf(".")
+    if (decpoint != -1) {
+	    //alert('decpoint = ' + decpoint);
+        begin = valstr.substring(0,decpoint);
+        end = valstr.substring(decpoint+1,valstr.length);
+		//alert('begin = ' + begin + '\nend= ' + end);
+    }
+    else {
+        begin = valstr;
+        end = "";
+    }
+	if (end.length < post)
+	 {while (end.length < post)
+	    {
+        end += "0";
+        }
+	 }
+
+	end = end.substring(0,post);
+	//alert('begin = ' + begin + '\nend= ' + end);
+    return (begin+"."+end);
+}
+function orderSubmit(type) {
+    if (type == 'order') {
+		if (  !  ( (document.order.order_type.checked) || checkRequired() )) {
+			// checkCardNumber(); ENTRY HERE
+	        alert('first true');
+            document.order.form_action.value = type;
+            document.order.submit();
+            return true;
+
+        } else {
+		    alert('first false');
+            return false;
+
+        }
+    }
+
+}
+var infowin = null;
+function copyToShipping() {
+    if (document.order.same_flag.checked) {
+        document.order.ship_name.value = document.order.name_first.value+' '+document.order.name_last.value;
+        document.order.ship_address1.value = document.order.address1.value;
+        document.order.ship_address2.value = document.order.address2.value;
+        document.order.ship_city.value = document.order.city.value;
+        document.order.ship_state.value = document.order.state.value;
+        document.order.ship_zip.value = document.order.zip.value;
+        document.order.ship_country.value = document.order.country.value;
+        document.order.ship_phone.value = document.order.phone.value;
+    }
+}
+function disableSameFlag() {
+    document.order.same_flag.checked = false;
+}
+function checkRequired() {
+    if (!document.order.name_first.value.length ||
+        !document.order.name_last.value.length ||
+        !document.order.email.value.length ||
+        !document.order.address1.value.length ||
+        !document.order.city.value.length ||
+        !document.order.state.value.length ||
+        !document.order.zip.value.length ||
+        !document.order.country.value.length ||
+        !document.order.ship_name.value.length ||
+        !document.order.ship_address1.value.length ||
+        !document.order.ship_city.value.length ||
+        !document.order.ship_state.value.length ||
+        !document.order.ship_zip.value.length ||
+        !document.order.ship_country.value.length) {
+
+		alert('You have not completed all required fields:\n' +
+              'Please complete the Name, Address, City,\n' +
+              'County, Post Code, and Country in both the\n' +
+              'Customer Info and Shipping Address sections');
+        return true;
+
+    } else {
+        return false;
+    }
+}
+<!-- -->
+</script><!-- --><a name="top"></a>
+
+<!-- This sets the background -->
+<body background=linear-gradient(180deg, #36C5FF 25%, #ABECFF 60%);
+text="#000000" onLoad=parent.refresh_ship_details(parent.ship_details) onUnload=parent.add_ship_details(parent.ship_details)>
+<center>
+<script
+language="javascript">
+</script>
+<p><font color="black" size="7">Checkout!</i><br>
+</font></p>
+
+<table border="0" width=300>
+</table>
+
+</p>
+
+
+<!-- This set to where the email will go to -->
+<form action="MAILTO:RDS@rollins.edu" method="POST" name="order">
+    <input type="hidden" name="subject"
+    value="Order Forms - NAME OF FORM HERE"><input type="hidden"
+    name="recipient" value="RDS@rollins.edu"><input
+    type="hidden" name="redirect"
+    value="thanku.html"><input
+    type="hidden" name="retailer" value="Rollins Delivery Service"><input
+    type="hidden" name="form_action" value="order">
+
+<script
+    language="javascript">
+<!-- hide from Browsers
+document.write('<table width=400><td align=center>');
+document.write('<table width=400 ><tr><tr><td align=right colspan=3 BGCOLOR=#FF9999><font size=+2>Running Total : $ </td><td colspan=3 BGCOLOR=FF9999> <input type=text name=total size=6 value='+ format(parent.all_order_totals(),2) + '></font></td><tr>');
+
+document.write('<td colspan=6 align=center><b>This is your Order Total so far<br> <i>(Including Shipping)</i>.</td></tr><tr></table>');
+if (parent.items_ordered == 0)
+    document.write('<font color=#000080><b>You have not ordered any items so far<b></font>');
+if (parent.item_num > 0)
+{
+for (i =1;i < parent.item_num;i++)
+   { if (parent.itemlist[i].quan > 0)
+     {index = index + 1;
+document.write('<a href='+ parent.itemlist[i].url + '><i><b> review : </b></i></a><input size=10 type=text name= ' + parent.itemlist[i].code + '   value= ' +  parent.itemlist[i].code + '><input size=6  type=text name= ' + parent.itemlist[i].code + ' value=' +  parent.itemlist[i].price + '><input size=20 type=text  name= ' + parent.itemlist[i].code + '  value= '+  parent.itemlist[i].desc + '><input size=2 type=text name= ' + parent.itemlist[i].desc + '  value= '+  parent.itemlist[i].quan + '><br>');
+     }
+   }
+}
+
+
+<!-- end hiding -->
+</script>
+
+<table border="0" width=400>
+        <tr>
+            <td align="center" colspan="6" bgcolor="#FF9999"><b>Meal Preferences
+            &amp; Dietary Restrictions <br><font color=#ffff00>Can be written in the box below</font><br>
+</b></td>
+        </tr>
+        <tr>
+            <td colspan="6"><center><textarea name="comments" rows="10"
+            cols="40"></textarea></center></td>
+        </tr>
+    </table>
+<!-- Customer Info Table -->
+<table border="0" cellpadding="0" cellspacing="0"
+    bgcolor="#00FFFF" width=400>
+        <tr>
+
+            <td align="center" colspan="5" bgcolor="#CCFFFF"><b>Customer
+            Information:</b></td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2" bgcolor="#CCFFFF"><b>First
+            Name: </b></td>
+            <td colspan="3" bgcolor="#CCFFFF"><input type="text"
+            size="30" maxlength="30" name="name_first"></td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2" bgcolor="#CCFFFF"><b>Last
+            Name:</b> </td>
+            <td colspan="3" bgcolor="#CCFFFF"><input type="text"
+            size="30" maxlength="30" name="name_last"></td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2" bgcolor="#CCFFFF"><b>Campus Building:</b>
+            </td>
+            <td colspan="3" bgcolor="#CCFFFF"><input type="text"
+            size="30" maxlength="60" name="campus_building"></td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2" bgcolor="#CCFFFF"><b>Room Number:</b>
+            </td>
+            <td colspan="3" bgcolor="#CCFFFF"><input type="text"
+            size="25" maxlength="25" name="room_number"></td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2" bgcolor="#CCFFFF"><b>Phone:</b>
+            </td>
+            <td colspan="3" bgcolor="#CCFFFF"><input type="text"
+            size="25" maxlength="25" name="phone"></td>
+        </tr>
+    </table>
+	<br>
+	<a href="thanku.html" class="button1">Place Order</a>
+    <br>
+    <p>In the event of difficulty with the checkout process, please email us directly at: <a href=mailto:RDS rvargas@rollins.edu>RDS@rollins.edu </a> or give us a call at: (407) 646-2000</p>
+    <p align="center"><br>
+</form>
+</td></table>
+</center>
+</p>
+</body >
+</html>
